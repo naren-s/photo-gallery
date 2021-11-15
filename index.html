@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Photo Gallery</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="full-img" id="fullImgBox">
+            <img src="images/img1.jpg" id="fullImg">
+            <span onclick="closeFullImg()">X</span>
+            </div>
+        <div class="img-gallery">
+            <img src="images/img1.jpg" onclick="openFullImg(this.src)">
+            <img src="images/img2.jpg" onclick="openFullImg(this.src)">
+            <img src="images/img3.jpg" onclick="openFullImg(this.src)">
+            <img src="images/img4.jpg" onclick="openFullImg(this.src)">
+            <img src="images/img5.jpg" onclick="openFullImg(this.src)">
+            <img src="images/img6.jpg" onclick="openFullImg(this.src)">
+            <img src="images/img7.jpg" onclick="openFullImg(this.src)">
+            <img src="images/img8.jpg" onclick="openFullImg(this.src)">
+            </div>
+        <div class="donate-btn">
+            <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_IFqrVkcDjy1E5U" async> </script> </form>
+        </div>
+        <script>
+            var fullImgBox = document.getElementById("fullImgBox");
+            var fullImg = document.getElementById("fullImg");
+
+            function openFullImg(pic){
+                fullImgBox.style.display = "flex";
+                fullImg.src = pic;
+            }
+
+            function closeFullImg(){
+                fullImgBox.style.display = "none";
+            }
+
+        </script>
+    </body>
+</html>
